@@ -9,7 +9,9 @@
   },
   "dependencies": {
     "pinia": "^2.0.32",
-    "vue": "^3.2.47"
+    "vue": "^3.2.47",
+    "vue-material-design-icons": "^5.2.0",
+    "vue3-carousel": "^0.3.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.0.0",
