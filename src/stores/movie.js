@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 
-export const useCounterStore = defineStore('counter', {
+export const useMovieStore = defineStore('movie', {
   state: () => ({
     movie: null,
     showFullVideo: false,

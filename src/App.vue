@@ -14,7 +14,28 @@ const {movie, showFullVideo}=storeToRefs(useMovie)
 </script>
 
 <template>
-  <div class="text-red-900">text here</div>
+  <div class="fixed w-full h-screen bg-black">
+    <div v-if="!showFullVideo" id="SideNav" class="flex z-40 items-center w-[120px] h-screen bg-black relative">
+    D
+    <div class="">
+      <div class="py-2 mx-10 my-6">
+        <Magnify fillColor="#fff" :size=40 class="cursor-pointer"/>
+      </div>
+      <div class="py-2 mx-10 my-6 border-b-4 border-b-red-500">
+        <HomeOutline fillColor="#fff" :size=40 class="cursor-pointer"/>
+      </div>
+      <div class="py-2 mx-10 my-6">
+        <TrendingUp fillColor="#fff" :size=40 class="cursor-pointer"/>
+      </div><div class="py-2 mx-10 my-6">
+        <Television fillColor="#fff" :size=40 class="cursor-pointer"/>
+      </div><div class="py-2 mx-10 my-6">
+        <MovieOutline fillColor="#fff" :size=40 class="cursor-pointer"/>
+      </div><div class="py-2 mx-10 my-6">
+        <Plus fillColor="#fff" :size=40 class="cursor-pointer"/>
+      </div>
+    </div>
+  </div>
+  </div>
 </template>
 
 <style scoped>
