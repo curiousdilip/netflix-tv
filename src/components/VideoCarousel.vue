@@ -9,8 +9,17 @@
             :transition="500" snapAlign="start" class="bg-transparent">
             <Slide v-for="slide, index in movies" :key="slide"
                 class="flex items-center object-cover text-white bg-transparent">
+                <div @click="$event => fullScreenVideo(index)"
+                    class="object-cover h-[100%] hover:brightness-125 cursor-pointer"
+                    :class="currentSlide !== index ? 'border-4 border-transparent' : 'border-4 border-white', currentSlideObject(slide, index)">
+                    <img style="user-select: none;" class="pointer-events-none h-[100%] z-[-1]"
+                        :src="'/images/' + slide.name + '.png'" alt="">
+                </div>
 
-                {{ slide }}</Slide>
+            </Slide>
+            <template #addons>
+                <Navigation />
+            </template>
         </Carousel>
     </div>
 </template>
@@ -36,7 +45,8 @@ const currentSlideObject = (slide, index) => {
 }
 
 const fullScreenVideo = (index) => {
-    currentSlide(() => showFullVideo.value = true, 500)
+    currentSlide.value = index
+    setTimeout(() => showFullVideo.value = true, 500)
 }
 </script>
 

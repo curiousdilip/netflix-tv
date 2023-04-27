@@ -24,7 +24,7 @@ onMounted(() => {
 <template>
   <div class="fixed w-full h-screen bg-black">
     <div v-if="!showFullVideo" id="SideNav" class="flex z-40 items-center w-[120px] h-screen bg-black relative">
-      <img src="../public/images/netflix-logo.png" alt="" class="absolute top-0 w-[35px] mt-10 ml-10">
+      <img src="/images/netflix-logo.png" alt="" class="absolute top-0 w-[35px] mt-10 ml-10">
       <div class="">
         <div class="py-2 mx-10 my-6">
           <Magnify fillColor="#fff" :size=40 class="cursor-pointer" />
