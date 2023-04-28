@@ -24,8 +24,8 @@ onMounted(() => {
 <template>
   <div class="fixed w-full h-screen bg-black">
     <div v-if="!showFullVideo" id="SideNav" class="flex z-40 items-center w-[120px] h-screen bg-black relative">
-      <img src="/images/netflix-logo.png" alt="" class="absolute top-0 w-[35px] mt-10 ml-10">
-      <div class="">
+      <img src="/images/netflix-logo.png" alt="" class="absolute top-0 w-[35px] mt-10 ml-10 z-40">
+      <div class="z-40">
         <div class="py-2 mx-10 my-6">
           <Magnify fillColor="#fff" :size=40 class="cursor-pointer" />
         </div>
@@ -48,7 +48,7 @@ onMounted(() => {
 
       <div v-if="!showFullVideo">
         <div class="fixed flex z-20 top-0 right-0 w-full h-[50%] bg-black pl-[120px] bg-clip-border">
-
+          <div class="absolute z-30 h-[600px] left-[120px] w-[77%] right-0 top-0 bg-gradient-to-r from-black via-black" />
           <MovieDetails v-if="movie" :movie="movie" />
 
           <video v-if="movie" :src="'/videos/' + movie.name + '.mp4'" autoplay loop
@@ -62,6 +62,8 @@ onMounted(() => {
         <VideoCarousel class="pb-32" category="Featured Movies" :movies="movies[2]" />
       </div>
     </div>
+    <div class="absolute z-20 h-[70%] left-[120px] w-[100%] right-0 bottom-0 bg-gradient-to-t from-black via-black" />
+
   </div>
 </template>
 

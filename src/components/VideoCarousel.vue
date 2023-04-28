@@ -36,7 +36,7 @@ const { movie, showFullVideo } = storeToRefs(useMovie)
 let currentSlide = ref(0)
 
 const props = defineProps({ category: String, movies: Array })
-const { movies, category } = toRefs(Props)
+const { movies, category } = toRefs(props)
 
 const currentSlideObject = (slide, index) => {
     if (index === currentSlide.value) {
@@ -51,10 +51,10 @@ const fullScreenVideo = (index) => {
 </script>
 
 <style>
-.caoursel__prev,
-.caoursel__next,
-.caoursel__prev:hover,
-.caoursel__next:hover {
+.carousel__prev,
+.carousel__next,
+.carousel__prev:hover,
+.carousel__next:hover {
     color: white;
 }
 </style>
